@@ -43,20 +43,21 @@ function updateWorkTimer() {
 setInterval(updateWorkTimer, 1000);
 updateWorkTimer();
 
-// 3. LOGIKA SMART COMMUTE (GPS)
+// 3. LOGIKA SMART COMMUTE (GPS) - REVISI LOKASI & SYNTAX
 function setupCommute() {
     const statusText = document.getElementById('gps-status');
     const navBtn = document.getElementById('nav-btn');
-    const destination = "https://maps.app.goo.gl/mz5DtnRmDTbjnqkQ8"; 
+    const destination = "https://maps.app.goo.gl/URF7ZbBAgFzBPX1EA"; 
 
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(
             function(position) {
                 statusText.innerText = "Terkunci 📍";
-                statusText.style.color = "#10B981"; // Hijau
+                statusText.style.color = "#10B981"; 
                 
                 const lat = position.coords.latitude;
                 const lng = position.coords.longitude;
+                // Perbaikan template literal ${} agar koordinat terbaca benar
                 navBtn.href = `https://www.google.com/maps/dir/?api=1&origin=${lat},${lng}&destination=${encodeURIComponent(destination)}&travelmode=driving`;
             },
             function(error) {
