@@ -47,7 +47,7 @@ updateWorkTimer();
 function setupCommute() {
     const statusText = document.getElementById('gps-status');
     const navBtn = document.getElementById('nav-btn');
-    const destination = "https://maps.app.goo.gl/nEyw8f4S1HQ3Rxac6"; 
+    const destination = "https://maps.app.goo.gl/65nRMQ7VsqpkDHgP9"; 
 
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(
