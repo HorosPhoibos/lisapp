@@ -1,0 +1,88 @@
+/* Elegan Pinky Theme */
+:root {
+    --bg-main: #FFF0F5; 
+    --card-bg: #FFFFFF;
+    --text-main: #4A4A4A;
+    --text-muted: #8B7D84;
+    --accent-pink: #D81B60;
+    --accent-light: #FCE4EC;
+    --border-radius: 16px;
+    --shadow: 0 4px 20px rgba(216, 27, 96, 0.08);
+}
+
+body { font-family: 'Inter', sans-serif; background-color: var(--bg-main); color: var(--text-main); margin: 0; padding: 20px; }
+.container { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+.header-section { background: var(--card-bg); padding: 25px; border-radius: var(--border-radius); box-shadow: var(--shadow); border-top: 5px solid var(--accent-pink); }
+.header-row-top { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--accent-light); padding-bottom: 15px; margin-bottom: 15px; }
+.title-area h1 { margin: 0; color: var(--accent-pink); font-size: 2rem; }
+.title-area p { margin: 5px 0 0; color: var(--text-muted); font-weight: 600; }
+.clock-display { font-size: 2rem; font-weight: 800; color: var(--accent-pink); background: var(--accent-light); padding: 10px 20px; border-radius: 12px; }
+.card { background: var(--card-bg); padding: 20px; border-radius: var(--border-radius); box-shadow: var(--shadow); }
+.card h2 { margin-top: 0; font-size: 1.2rem; color: var(--accent-pink); border-bottom: 2px solid var(--accent-light); padding-bottom: 10px; }
+.timer-card { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(135deg, #ffffff 0%, #fff0f5 100%); }
+.timer-title { color: #8B7D84 !important; font-size: 1rem !important; text-transform: uppercase; border: none !important; }
+.timer-display { font-size: 2.5rem; font-weight: 800; margin-top: 10px; }
+.chart-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
+.tradingview-widget-container { height: 220px; width: 100%; }
+.grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+/* WIDGET CUACA */
+.weather-dashboard { display: flex; flex-direction: column; gap: 15px; }
+.weather-hero { background: linear-gradient(135deg, var(--accent-pink) 0%, #B0124D 100%); color: white; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(216, 27, 96, 0.2); }
+.weather-hero .temp-big { font-size: 3rem; font-weight: 800; margin: 5px 0; }
+.weather-hero .desc { font-weight: 600; letter-spacing: 1px; }
+.weather-sub-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.weather-sub { background: var(--bg-main); padding: 12px 5px; border-radius: 10px; text-align: center; border: 1px solid var(--accent-light); }
+.weather-sub .loc { font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; }
+.weather-sub .temp-small { font-size: 1.1rem; font-weight: 800; color: var(--accent-pink); margin-top: 5px; }
+
+/* Commute & GPS */
+.commute-info { text-align: center; padding: 15px 0; }
+.gps-status-text { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 10px; }
+#gps-status { font-weight: 600; color: var(--accent-pink); }
+.btn-nav { display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; padding: 12px 24px; background-color: var(--accent-pink); color: white; border-radius: 30px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(216, 27, 96, 0.3); margin-top: 15px; }
+.btn-nav:hover { background-color: #B0124D; transform: translateY(-2px); }
+.nav-hint { font-size: 0.8rem; color: #8B7D84; margin-top: 15px; }
+
+/* Running Tracker */
+.run-stats { display: flex; justify-content: space-around; margin: 20px 0; }
+.stat-box { text-align: center; }
+.stat-value { font-size: 2.2rem; font-weight: 800; color: var(--accent-pink); display: block; line-height: 1; margin-bottom: 5px; }
+.stat-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+.run-progress-area { margin-top: 20px; }
+.progress-header { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-main); font-weight: 600; margin-bottom: 8px; }
+.progress-bar-bg { background: var(--accent-light); height: 12px; border-radius: 10px; overflow: hidden; }
+.progress-bar-fill { background: var(--accent-pink); height: 100%; border-radius: 10px; transition: width 1s ease-in-out; }
+.run-hint { font-size: 0.85rem; color: var(--text-muted); margin-top: 15px; text-align: center; line-height: 1.5; }
+
+/* Berita */
+.news-scroll { max-height: 250px; overflow-y: auto; }
+.news-item { padding: 12px 0; border-bottom: 1px solid var(--accent-light); }
+.news-item a { text-decoration: none; color: var(--text-main); font-weight: 600; transition: color 0.3s; }
+.news-item a:hover { color: var(--accent-pink); }
+.news-date { font-size: 0.85rem; color: var(--text-muted); margin-top: 5px; }
+
+/* Styling Ayat Alkitab (Dulu Gombalan) */
+.verse-container {
+    padding: 15px;
+    background: linear-gradient(135deg, var(--accent-light) 0%, #FFFFFF 100%);
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-pink);
+    margin-top: 10px;
+    text-align: center;
+}
+
+.verse-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent-pink);
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .grid-2col { grid-template-columns: 1fr; }
+    .header-row-top { flex-direction: column; text-align: center; gap: 15px; }
+    .weather-sub-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisa's Super App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="header-section">
+            <div class="header-row-top">
+                <div class="title-area">
+                    <h1>Halo, Lisa! 🌸</h1>
+                    <p>Executive Command Center</p>
+                </div>
+                <div class="time-area">
+                    <div id="clock" class="clock-display">00:00:00</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-2col">
+            <div class="card timer-card">
+                <h2 class="timer-title">Status Waktu Kerja</h2>
+                <div id="countdown" class="timer-display">Menghitung...</div>
+            </div>
+
+            <div class="card">
+                <h2>⛅ Cuaca Jabodetabek</h2>
+                <div class="weather-dashboard">
+                    <div class="weather-hero">
+                        <div class="loc">📍 Jakarta (Lokal)</div>
+                        <div class="temp-big">32° <span style="font-size: 2rem;">🌤️</span></div>
+                        <div class="desc">Cerah Berawan</div>
+                    </div>
+                    
+                    <div class="weather-sub-grid">
+                        <div class="weather-sub">
+                            <div class="loc">Bekasi</div>
+                            <div class="temp-small">31°C ⛈️</div>
+                        </div>
+                        <div class="weather-sub">
+                            <div class="loc">Bogor</div>
+                            <div class="temp-small">26°C 🌧️</div>
+                        </div>
+                        <div class="weather-sub">
+                            <div class="loc">Tangerang</div>
+                            <div class="temp-small">30°C ☁️</div>
+                        </div>
+                        <div class="weather-sub">
+                            <div class="loc">Depok</div>
+                            <div class="temp-small">29°C 🌦️</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📖 Ayat Alkitab Hari Ini</h2>
+            <div class="verse-container">
+                <p id="daily-verse" class="verse-text">Menyiapkan firman Tuhan...</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📊 Market Radar</h2>
+            <div class="chart-grid">
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                    { "symbol": "IDX:COMPOSITE", "width": "100%", "height": "100%", "locale": "en", "dateRange": "1M", "colorTheme": "light", "isTransparent": true, "autosize": true, "largeChartUrl": "" }
+                    </script>
+                </div>
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                    { "symbol": "BINANCE:BTCUSDT", "width": "100%", "height": "100%", "locale": "en", "dateRange": "1M", "colorTheme": "light", "isTransparent": true, "autosize": true, "largeChartUrl": "" }
+                    </script>
+                </div>
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                    { "symbol": "FX_IDC:USDIDR", "width": "100%", "height": "100%", "locale": "en", "dateRange": "1M", "colorTheme": "light", "isTransparent": true, "autosize": true, "largeChartUrl": "" }
+                    </script>
+                </div>
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                    { "symbol": "FX_IDC:XAUIDR", "width": "100%", "height": "100%", "locale": "id", "dateRange": "1M", "colorTheme": "light", "isTransparent": true, "autosize": true, "largeChartUrl": "" }
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-2col">
+            <div class="card">
+                <h2>🏢 To Work</h2>
+                <div class="commute-info">
+                    <div class="gps-status-text">Status Lokasi: <span id="gps-status">Mencari sinyal GPS... 📡</span></div>
+                    <a id="nav-btn" href="https://maps.app.goo.gl/nEyw8f4S1HQ3Rxac6" target="_blank" class="btn-nav">
+                        <span>🗺️</span> Buka Navigasi ke Kantor
+                    </a>
+                    <p class="nav-hint">Klik tombol di atas untuk rute & waktu tempuh real-time di Google Maps.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>🏃‍♀️ Running Tracker</h2>
+                <div class="run-stats">
+                    <div class="stat-box">
+                        <span class="stat-value">5.2</span> km
+                        <span class="stat-label">Lari Terakhir</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">6'30"</span> /km
+                        <span class="stat-label">Avg Pace</span>
+                    </div>
+                </div>
+                <div class="run-progress-area">
+                    <div class="progress-header">
+                        <span>Target Mingguan: 20 km</span>
+                        <span>15 km selesai</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <p id="run-hint-text" class="run-hint">Mengecek perkiraan cuaca besok... 🌤️</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📰 Info Terkini & Lifestyle</h2>
+            <div id="newsContainer" class="news-scroll">
+                <p>Mengambil berita terkini...</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="alkitab.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
